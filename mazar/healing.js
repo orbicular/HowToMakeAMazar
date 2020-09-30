@@ -193,7 +193,7 @@ const tl3 = gsap.timeline()
     .to('#baishe', {
         opacity: 0,
         duration: 2
-    }, '-=2')
+    }, '-=4')
     .to('#beiteng', {
         opacity: 0,
         duration: 2
@@ -376,7 +376,7 @@ const tl7 = gsap.timeline({
     scrollTrigger: {
         trigger: '#sectionChemical',
         pin: true,   // pin the trigger element while active
-        end: "+=3000", // end after scrolling 3000px beyond the start
+        end: "+=1000", // end after scrolling 3000px beyond the start
         scrub: true
     }
 })
