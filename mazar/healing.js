@@ -72,7 +72,7 @@ function main() {
 //gsap part
 
 var textEl = document.getElementById('leixing');
-var textStr = '麻扎共有7种类型:<br> 水麻扎：泉，湖，河；<br> 自然麻扎：树，山；<br> 人造麻扎：墓，墓碑，堡垒，磨坊；<br> 国家麻扎：受国家保护的国家财产；<br> 动物麻扎：这些麻扎的精神支持者是神圣的动物；<br> 失踪却没有死亡的人的麻扎；<br> 石头麻扎';
+var textStr = '<br> 水麻扎：如泉、湖、河；<br> 自然麻扎：如树、山；<br> 人造麻扎：如墓、墓碑、堡垒、磨坊；<br> 国家麻扎：受国家保护的国家财产；<br> 动物麻扎：它们的精神支持者是神圣的动物；<br> 失踪却没有死亡的人的麻扎；<br> 石头麻扎';
 
 const tl1 = gsap.timeline({
     scrollTrigger: {
@@ -94,17 +94,21 @@ tl1.to('#word', {
     }, 'tag')
     .to('#tuopian', {
         text: {
-            value: '制作麻扎铭文，使点和划介于阿拉伯语字母和自然痕迹之间。其中一个词是治疗。'
+            value: '制作麻扎铭文，使点和划介于阿拉伯语字母和自然痕迹之间。'
         },
-        duration: 4
+        duration: 2
     }, 'tag2')
     .to('#leixing', {
         opacity: 0,
         duration: 2
     }, 'tag2')
-    .to('#word', {
+    .to('#gongyou', {
         opacity: 0,
-        duration: 8
+        duration: 2
+    }, 'tag2')
+    .to('#word', {
+        opacity: 0.5,
+        duration: 2
     }, 'tag2')
     .to('#sectionStart', {
         autoAlpha: 0,
@@ -125,7 +129,8 @@ const tl2 = gsap.timeline({
 })
 tl2.to('#mapBlack', {
     opacity: .3,
-    duration: 2
+    y:'80vh',
+    duration: 4
 }, 'tag3')
     .to(textEl2, 8, {
         text: {
@@ -162,9 +167,9 @@ tl2.to('#mapBlack', {
 var textEl3 = document.getElementById('kunan');
 var textStr3 = '波动的苦难场的意思<br>()<br>（）<br>【】<br>「」<br>{}<br>[]';
 var textEl4 = document.getElementById('baishe');
-var textStr4 = '注意白蛇，许多人梦见过一条白蛇，显然是泉的主人';
+var textStr4 = '注意白蛇，许多人梦见过一条白蛇，它显然是泉的主人';
 var textEl5 = document.getElementById('beiteng');
-var textStr5 = '背痛的人倾向于靠在这个麻扎上';
+var textStr5 = '背痛和有恐惧症的人倾向于靠在这种麻扎上';
 
 const tl3 = gsap.timeline()
     .to(textEl3, 4, {
@@ -215,47 +220,47 @@ ScrollTrigger.create({
     pin: true,
 })
 
-var textEl6 = document.getElementById('shanghai');
-var textStr6 = '不可将可能对其神圣性造成伤害的东西（大声的音乐，生火的东西，酒精性饮料和武器）带到神圣的场所或危害它们。';
-var textEl7 = document.getElementById('kongju');
-var textStr7 = '现在，泉水是对恐惧症的一种治疗方法。它还对口或鼻子变形、瘫痪、癫痫和肌腱痉挛的人有帮助。';
+// var textEl6 = document.getElementById('shanghai');
+// var textStr6 = '禁止将可能对其神圣性造成伤害的东西（大声的音乐，生火的东西，酒精性饮料和武器）带到神圣的场所或危害它们。';
+// var textEl7 = document.getElementById('kongju');
+// var textStr7 = '现在，泉水是对恐惧症的一种治疗方法。它还对口或鼻子变形、瘫痪、癫痫和肌腱痉挛的人有帮助。';
 
-const tl4 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '#sectionMosque',
-        pin: true,   // pin the trigger element while active
-        end: "+=3000", // end after scrolling 3000px beyond the start
-        scrub: true
-    }
-})
-tl4.to(textEl6, 4, {
-    text: {
-        value: textStr6
-    },
-    ease: Linear.noease,
-})
-    .to('#mosque', {
-        opacity: 0,
-        duration: 4
-    }, '-=4')
-    .to(textEl7, 4, {
-        text: {
-            value: textStr7
-        },
-        ease: Linear.noease,
-    })
-    .to('#statue', {
-        opacity: 0,
-        duration: 4
-    }, '-=4')
-    .to('#shanghai', {
-        opacity: 0,
-        duration: 4
-    }, '-=4')
-    .to('#sectionMosque', {
-        autoAlpha: 0,
-        duration: 2
-    })
+// const tl4 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '#sectionMosque',
+//         pin: true,   // pin the trigger element while active
+//         end: "+=3000", // end after scrolling 3000px beyond the start
+//         scrub: true
+//     }
+// })
+// tl4.to(textEl6, 4, {
+//     text: {
+//         value: textStr6
+//     },
+//     ease: Linear.noease,
+// },'-=2')
+//     .to('#mosque', {
+//         opacity: 0,
+//         duration: 4
+//     }, '-=4')
+//     .to(textEl7, 4, {
+//         text: {
+//             value: textStr7
+//         },
+//         ease: Linear.noease,
+//     })
+//     .to('#statue', {
+//         opacity: 0,
+//         duration: 4
+//     }, '-=4')
+//     .to('#shanghai', {
+//         opacity: 0,
+//         duration: 4
+//     }, '-=4')
+//     .to('#sectionMosque', {
+//         autoAlpha: 0,
+//         duration: 2
+//     })
 
 
 const tl = gsap.timeline({
@@ -281,8 +286,8 @@ tl.to('canvas', {
         delay: 4
     })
     .to('#i3', {
-        duration: 3,
-        delay: 1,
+        duration: 4,
+        delay: 2,
         y: '90%',
         right: '10%',
         width: '40%',
@@ -427,14 +432,16 @@ tl8.to('#disco', {
         y: '85%',
         duration: 6
     }, 'yi')
-    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。留意你的乳头。如果将人约束在某个限制性环境，再将此人浸泡在温水里，那么ta会很快开始听见、看见……'},'-=4')
+    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。<br>留意你的乳头。<br>如果将人约束在某个限制性环境，再浸泡在温水里，那么ta会很快开始听见、看见……'},'-=4')
     .to('#mapFlat', {
         opacity: 0,
-        duration: 0.5
+        duration: 0.5,
+        delay:2
     },'xiaoshi')
     .to('#jixia', {
         opacity: 0,
-        duration: 0.5
+        duration: 0.5,
+        delay:2
     },'xiaoshi')
     .to('#video2', {
         opacity: 1,
