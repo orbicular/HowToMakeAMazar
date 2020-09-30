@@ -72,7 +72,7 @@ function main() {
 //gsap part
 
 var textEl = document.getElementById('leixing');
-var textStr = '麻扎共有7种类型:<br> 水麻扎：泉，湖，河<br> 自然麻扎：树，山<br> 人造麻扎：墓，墓碑，堡垒，磨坊<br> 国家麻扎：受国家保护的国家财产<br> 动物麻扎：这些麻扎的精神支持者是神圣的动物<br> 失踪却没有死亡的人的麻扎<br> 石头麻扎';
+var textStr = '麻扎共有7种类型:<br> 水麻扎：泉，湖，河；<br> 自然麻扎：树，山；<br> 人造麻扎：墓，墓碑，堡垒，磨坊；<br> 国家麻扎：受国家保护的国家财产；<br> 动物麻扎：这些麻扎的精神支持者是神圣的动物；<br> 失踪却没有死亡的人的麻扎；<br> 石头麻扎';
 
 const tl1 = gsap.timeline({
     scrollTrigger: {
