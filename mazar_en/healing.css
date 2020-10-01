@@ -34,7 +34,7 @@ img, video,audio {
 #tuopian {
     width: 32%;
     z-index: 1;
-    top: 40%;
+    top: 45%;
     right: 8%;
     opacity: 1;
 }
@@ -46,9 +46,9 @@ img, video,audio {
 }
 
 #leixing {
-    width: 30%;
+    width: 32%;
     top: 50%;
-    right: 67%;
+    left: 3%;
 }
 
 #mapBlack {
