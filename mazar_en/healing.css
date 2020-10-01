@@ -4,7 +4,7 @@ html, body {
     width: 100%;
     background-color: black;
     font-family:'Helvetica';
-    font-size: 1.05em;
+    font-size: 1.04em;
     line-height: 1.6em;
 }
 
@@ -34,7 +34,7 @@ img, video,audio {
 #tuopian {
     width: 32%;
     z-index: 1;
-    top: 50%;
+    top: 40%;
     right: 8%;
     opacity: 1;
 }
@@ -47,8 +47,8 @@ img, video,audio {
 
 #leixing {
     width: 30%;
-    top: 53.5%;
-    right: 65%;
+    top: 53%;
+    right: 67%;
 }
 
 #mapBlack {

@@ -437,7 +437,7 @@ tl8.to('#disco', {
         y: '85%',
         duration: 6
     }, 'yi')
-    .to("#jixia", { duration: 4, text: '   Remember the night and all the rules here.<br>  Pay attention to your nipples.<br>If a person is confined to a restricted environment without light and sound, and immersed in warm water, he/she will soon begin to hear and see...' }, '-=4')
+    .to("#jixia", { duration: 4, text: '   Remember the night and all the rules here.<br>  Pay attention to your nipples.<br>If a person is confined to a restricted environment without light and sound, and immersed in warm water, <br>he/she will soon begin to hear and see...' }, '-=4')
     .to('#mapFlat', {
         opacity: 0,
         duration: 0.5,
