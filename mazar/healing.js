@@ -72,7 +72,7 @@ function main() {
 //gsap part
 
 var textEl = document.getElementById('leixing');
-var textStr = '<br> 水麻扎：如泉、湖、河；<br> 自然麻扎：如树、山；<br> 人造麻扎：如墓、墓碑、堡垒、磨坊；<br> 国家麻扎：受国家保护的国家财产；<br> 动物麻扎：它们的精神支持者是神圣的动物；<br> 失踪却没有死亡的人的麻扎；<br> 石头麻扎';
+var textStr = '而麻扎共有7种类型：<br> 水麻扎：如泉、湖、河；<br> 自然麻扎：如树、山；<br> 人造麻扎：如墓、墓碑、堡垒、磨坊；<br> 国家麻扎：受国家保护的国家财产；<br> 动物麻扎：它们的精神支持者是神圣的动物；<br> 失踪却没有死亡的人的麻扎；<br> 石头麻扎';
 
 const tl1 = gsap.timeline({
     scrollTrigger: {
@@ -102,10 +102,10 @@ tl1.to('#word', {
         opacity: 0,
         duration: 2
     }, 'tag2')
-    .to('#gongyou', {
-        opacity: 0,
-        duration: 2
-    }, 'tag2')
+    // .to('#gongyou', {
+    //     opacity: 0,
+    //     duration: 2
+    // }, 'tag2')
     .to('#word', {
         opacity: 0.5,
         duration: 2
@@ -129,7 +129,7 @@ const tl2 = gsap.timeline({
 })
 tl2.to('#mapBlack', {
     opacity: .3,
-    y:'80vh',
+    y: '80vh',
     duration: 4
 }, 'tag3')
     .to(textEl2, 8, {
@@ -207,11 +207,11 @@ const tl3 = gsap.timeline()
         opacity: 1,
         duration: 2,
     })
-// .to('#sectionVideo', {
-//     autoAlpha: 0,
-//     duration: 2,
-//     delay: 5
-// })
+    .to('#sectionVideo', {
+        autoAlpha: 0,
+        duration: 2,
+        delay: 5
+    })
 ScrollTrigger.create({
     scrub: true,
     trigger: '#sectionVideo',
@@ -315,7 +315,7 @@ tl.to('canvas', {
     .to('#threed', {
         autoAlpha: 0,
         duration: 2,
-        delay:2
+        delay: 2
     })
 
 
@@ -328,7 +328,7 @@ const tl5 = gsap.timeline({
     scrollTrigger: {
         trigger: '#sectionFree',
         pin: true,   // pin the trigger element while active
-        end: "+=3000", // end after scrolling 3000px beyond the start
+        // end: "+=3000", // end after scrolling 3000px beyond the start
     }
 })
 tl5.to('#free', {
@@ -432,17 +432,17 @@ tl8.to('#disco', {
         y: '85%',
         duration: 6
     }, 'yi')
-    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。<br>留意你的乳头。<br>如果将人约束在某个限制性环境，再浸泡在温水里，那么ta会很快开始听见、看见……'},'-=4')
+    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。<br>留意你的乳头。<br>如果将人约束在某个限制性环境，再浸泡在温水里，那么ta会很快开始听见、看见……' }, '-=4')
     .to('#mapFlat', {
         opacity: 0,
         duration: 0.5,
-        delay:2
-    },'xiaoshi')
+        delay: 2
+    }, 'xiaoshi')
     .to('#jixia', {
         opacity: 0,
         duration: 0.5,
-        delay:2
-    },'xiaoshi')
+        delay: 2
+    }, 'xiaoshi')
     .to('#video2', {
         opacity: 1,
         duration: 4
