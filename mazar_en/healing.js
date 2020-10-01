@@ -72,7 +72,7 @@ function main() {
 //gsap part
 
 var textEl = document.getElementById('leixing');
-var textStr = '而麻扎共有7种类型：<br> 水麻扎：如泉、湖、河；<br> 自然麻扎：如树、山；<br> 人造麻扎：如墓、墓碑、堡垒、磨坊；<br> 国家麻扎：受国家保护的国家财产；<br> 动物麻扎：它们的精神支持者是神圣的动物；<br> 失踪却没有死亡的人的麻扎；<br> 石头麻扎';
+var textStr = 'and there are 7 types of mazars:<br> 1. Water mazars: spring, lake, river<br> 2. Nature mazars: tree, mountain<br>3. Man made mazars: cemetery, headstone, fortress, mill<br>4. State mazars: national properties guarded by state<br>5. Animal mazars (spiritual supporters of those mazars are sacred animals) <br> 6. Mazars of people who just disappeared but not died<br>7. Stone Mazars';
 
 const tl1 = gsap.timeline({
     scrollTrigger: {
@@ -94,7 +94,7 @@ tl1.to('#word', {
     }, 'tag')
     .to('#tuopian', {
         text: {
-            value: '制作麻扎铭文，使点和划介于阿拉伯语字母和自然痕迹之间。'
+            value: 'Make an inscription of Mazar. Make the dots and strokes appear to be between the Arabic alphabet and the traces of nature.'
         },
         duration: 2
     }, 'tag2')
@@ -117,7 +117,7 @@ tl1.to('#word', {
 
 
 var textEl2 = document.getElementById('xisheng');
-var textStr2 = '换句话说，这是一个大墓地。在麻扎以南，有一个平坦的平原；在东部、北部和西部，有一片沼泽地。';
+var textStr2 = 'In other words, it is a big cemetery. To the south of the mazar, there is a flat plain; to the east, north, and west, there is swampy land.';
 
 const tl2 = gsap.timeline({
     scrollTrigger: {
@@ -151,7 +151,7 @@ tl2.to('#mapBlack', {
         duration: 2
     }, 'tag4')
     .to('#mingbai', {
-        text: '在地图上找到42.6° N,74.9° E，获取地形和建筑的三维信息，你将明白',
+        text: 'Find 42.6° N, 74.9° E on the map, get 3D information of the terrain and buildings, you will understand',
         duration: 4
     }, 'tag5')
     .to('#mapBlack', {
@@ -165,11 +165,11 @@ tl2.to('#mapBlack', {
 
 //video part
 var textEl3 = document.getElementById('kunan');
-var textStr3 = '波动的苦难场的意思<br>()<br>（）<br>【】<br>「」<br>{}<br>[]';
+var textStr3 = 'the meaning of fluctuating suffering field<br>()<br>（）<br>【】<br>「」<br>{}<br>[]';
 var textEl4 = document.getElementById('baishe');
-var textStr4 = '注意白蛇，许多人梦见过一条白蛇，它显然是泉的主人';
+var textStr4 = 'Pay attention to the white snake. Many people have dreamed of a white snake. It is obviously the owner of the spring.';
 var textEl5 = document.getElementById('beiteng');
-var textStr5 = '背痛和有恐惧症的人倾向于靠在这种麻扎上';
+var textStr5 = 'People with backaches or phobias tend to lean on this type of Mazar';
 
 const tl3 = gsap.timeline()
     .to(textEl3, 4, {
@@ -277,7 +277,7 @@ tl.to('canvas', {
 }, 'yiqi')
     .to('#wuming', {
         duration: 4,
-        text: '制作黄昏中位于费尔干那盆地的无名麻扎。',
+        text: 'Make a nameless Mazar in the Fergana Valley at dusk.',
         delay: 8
     }, 'yiqi')
     .to('#i1', {
@@ -312,10 +312,15 @@ tl.to('canvas', {
         autoAlpha: 1
     },
         'same')
+    .to('#i1', {
+        duration: 5,
+        delay: 2,
+        scale: .7
+    },
+        'same')
     .to('#threed', {
         autoAlpha: 0,
         duration: 2,
-        delay: 2
     })
 
 
@@ -346,26 +351,26 @@ function playAudio(sth) {
 }
 
 const tl6 = gsap.timeline({ paused: true })
-tl6.to("#free", { duration: 4, text: "伟大（）战争的参与者。", delay: 2 })
-    .to("#free", { duration: 4, text: "伟大（）战争和（）事件中致残的人。", delay: 2 })
-    .to("#free", { duration: 4, text: "在打击国际恐怖主义中受到伤害而致残的。", delay: 2 })
-    .to("#free", { duration: 8, text: "伟大（）战争期间，由于无私的劳动和无可挑剔的军事服务，获得了勋章和奖章的。", delay: 2 })
-    .to("#free", { duration: 4, text: "曾被关押在（）的囚犯。", delay: 2 })
-    .to("#free", { duration: 4, text: "70岁以上的老兵。", delay: 2 })
-    .to("#free", { duration: 4, text: "多生多育的母亲。", delay: 2 })
-    .to("#free", { duration: 6, text: "在伟大（）战争时期，经历过非法强行动员，后被平反的。", delay: 2 })
-    .to("#free", { duration: 4, text: "（）英雄。", delay: 2 })
-    .to("#free", { duration: 4, text: "（）主义英雄。", delay: 2 })
-    .to("#free", { duration: 4, text: "参加了消除（）事故后果的人。", delay: 2 })
-    .to("#free", { duration: 4, text: "其残疾与（）有因果关系的残疾人。", delay: 2 })
-    .to("#free", { duration: 8, text: "在（）事故（）期间死亡、因事故后果引起疾病而死亡的人的家人。", delay: 2 })
-    .to("#free", { duration: 6, text: "事故发生后自愿从居住区离开，重新安置的人。", delay: 2 })
-    .to("#free", { duration: 8, text: "重新安置的18岁以下儿童和青少年，包括疏散当天处于胎儿期的。", delay: 2 })
-    .to("#free", { duration: 4, text: "在（）月（）日（）发生的事件,", delay: 2 })
-    .to("#free", { duration: 4, text: "（）月（）日（）发生的事件,", delay: 2 })
-    .to("#free", { duration: 4, text: "（）月（）日至（）日（）的事件,", delay: 2 })
-    .to("#free", { duration: 6, text: "以及（）年（）月（）事件中遇害的人的家人。", delay: 2 })
-    .to("#free", { duration: 4, text: "但需提供证明文件。", delay: 2 })
+tl6.to("#free", { duration: 4, text: "Participants of the Great () War.", delay: 2 })
+    .to("#free", { duration: 4, text: "Disabled people of the Great () War and () events.", delay: 2 })
+    .to("#free", { duration: 4, text: "Citizens who have suffered in the fight against international terrorism.", delay: 2 })
+    .to("#free", { duration: 8, text: "Citizens awarded medals for selfless labor and military service during the Great () War.", delay: 2 })
+    .to("#free", { duration: 4, text: "Former prisoners of ().", delay: 2 })
+    .to("#free", { duration: 4, text: "Veterans over the age of 70.", delay: 2 })
+    .to("#free", { duration: 4, text: "Mothers with many children.", delay: 2 })
+    .to("#free", { duration: 6, text: "Citizens who underwent illegal forcible mobilization into labor army and were rehabilitated.", delay: 2 })
+    .to("#free", { duration: 4, text: "Heroes of ().", delay: 2 })
+    .to("#free", { duration: 4, text: "Heroes of ()lism.", delay: 2 })
+    .to("#free", { duration: 8, text: "Persons who took part in the elimination of the consequences of the accident at ().", delay: 2 })
+    .to("#free", { duration: 6, text: "Disabled people for whom a causal relationship was established.", delay: 2 })
+    .to("#free", { duration: 4, text: "Families of those who died during the accident.", delay: 2 })
+    .to("#free", { duration: 4, text: "Persons evacuated and resettled", delay: 2 })
+    .to("#free", { duration: 8, text: "including those who were in an intrauterine state on the day of evacuation.", delay: 2 })
+    .to("#free", { duration: 6, text: "Members of the families of the victims who suffered", delay: 2 })
+    .to("#free", { duration: 4, text: "in the events of () in (),", delay: 2 })
+    .to("#free", { duration: 4, text: "() in (),", delay: 2 })
+    .to("#free", { duration: 4, text: "() in () and in () events in (),", delay: 2 })
+    .to("#free", { duration: 4, text: "with supporting documents.", delay: 2 })
     .to("#free", { duration: 4, opacity: 0, delay: 2 })
 
 sound.onplay = function () {
@@ -376,7 +381,7 @@ sound.onplay = function () {
 
 
 var textEl8 = document.getElementById('heshui');
-var textStr8 = '记下化学成分。';
+var textStr8 = 'Remember the chemical composition of the water.';
 const tl7 = gsap.timeline({
     scrollTrigger: {
         trigger: '#sectionChemical',
@@ -432,7 +437,7 @@ tl8.to('#disco', {
         y: '85%',
         duration: 6
     }, 'yi')
-    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。<br>留意你的乳头。<br>如果将人约束在某个限制性环境，再浸泡在温水里，那么ta会很快开始听见、看见……' }, '-=4')
+    .to("#jixia", { duration: 4, text: '   Remember the night and all the rules here.<br>  Pay attention to your nipples.<br>If a person is confined to a restricted environment without light and sound, and immersed in warm water, he/she will soon begin to hear and see...' }, '-=4')
     .to('#mapFlat', {
         opacity: 0,
         duration: 0.5,

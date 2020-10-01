@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     width: 100%;
     background-color: black;
-    font-family:'华文细黑';
+    font-family:'Helvetica';
     font-size: 1.05em;
     line-height: 1.6em;
 }
@@ -178,6 +178,7 @@ img, video,audio {
 #wuming {
     top: 80%;
     left: 8%;
+    width: 40%;
 }
 
 #covert{
@@ -208,7 +209,7 @@ img, video,audio {
 
 #heshui {
     width: 35%;
-    left: 80%;
+    left: 70%;
     top: 90%;
 }
 
@@ -237,7 +238,7 @@ img, video,audio {
 }
 
 #jixia{
-    width:25% ;
+    width:29% ;
     left: 37%;
     top: 70%;
     z-index: 3;

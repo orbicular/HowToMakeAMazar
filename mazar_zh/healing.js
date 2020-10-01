@@ -277,7 +277,7 @@ tl.to('canvas', {
 }, 'yiqi')
     .to('#wuming', {
         duration: 4,
-        text: '制作黄昏中位于费尔干那盆地的无名麻扎。',
+        text: '制作黄昏中位于费尔干纳盆地的无名麻扎。',
         delay: 8
     }, 'yiqi')
     .to('#i1', {
@@ -312,10 +312,15 @@ tl.to('canvas', {
         autoAlpha: 1
     },
         'same')
+        .to('#i1', {
+            duration: 5,
+            delay: 2,
+            scale: .7
+        },
+            'same')
     .to('#threed', {
         autoAlpha: 0,
         duration: 2,
-        delay: 2
     })
 
 
