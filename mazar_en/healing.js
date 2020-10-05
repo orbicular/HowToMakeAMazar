@@ -94,7 +94,7 @@ tl1.to('#word', {
     }, 'tag')
     .to('#tuopian', {
         text: {
-            value: 'Make an inscription of Mazar. Make the dots and strokes appear to be between the Arabic alphabet and the traces of nature.'
+            value: 'Make an inscription of mazar. Make the dots and strokes appear to be between the Arabic alphabet and the traces of nature.'
         },
         duration: 2
     }, 'tag2')
@@ -169,7 +169,7 @@ var textStr3 = 'the meaning of fluctuating suffering field<br>()<br>（）<br>�
 var textEl4 = document.getElementById('baishe');
 var textStr4 = 'Pay attention to the white snake. Many people have dreamed of a white snake. It is obviously the owner of the spring.';
 var textEl5 = document.getElementById('beiteng');
-var textStr5 = 'People with backaches or phobias tend to lean on this type of Mazar';
+var textStr5 = 'People with backaches or phobias tend to lean on this type of mazars.';
 
 const tl3 = gsap.timeline()
     .to(textEl3, 4, {
@@ -277,7 +277,7 @@ tl.to('canvas', {
 }, 'yiqi')
     .to('#wuming', {
         duration: 4,
-        text: 'Make a nameless Mazar in the Fergana Valley at dusk.',
+        text: 'Make a nameless mazar in the Fergana Valley at dusk.',
         delay: 8
     }, 'yiqi')
     .to('#i1', {
