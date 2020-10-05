@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     width: 100%;
     background-color: black;
-    font-family:'Helvetica';
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.04em;
     line-height: 1.6em;
 }
@@ -114,7 +114,7 @@ img, video,audio {
 }
 
 #beiteng {
-    width: 50%;
+    width: 35%;
     left: 59%;
     top: 90%;
 }
@@ -204,11 +204,11 @@ img, video,audio {
 #chemical {
     width: 18%;
     top: 10%;
-    left: 48%;
+    left: 46%;
 }
 
 #heshui {
-    width: 35%;
+    width: 30%;
     left: 70%;
     top: 90%;
 }
