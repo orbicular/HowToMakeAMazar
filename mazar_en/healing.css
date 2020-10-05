@@ -25,6 +25,10 @@ img, video,audio {
     opacity: 0;
 }
 
+#rm{
+    color: #c4c4c4;
+}
+
 #word {
     height: 100vh;
     right: 0;
@@ -48,7 +52,7 @@ img, video,audio {
 #leixing {
     width: 32%;
     top: 50%;
-    left: 3%;
+    left: 1%;
 }
 
 #mapBlack {
