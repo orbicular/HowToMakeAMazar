@@ -165,7 +165,7 @@ tl2.to('#mapBlack', {
 
 //video part
 var textEl3 = document.getElementById('kunan');
-var textStr3 = 'the meaning of fluctuating suffering field<br>()<br>（）<br>【】<br>「」<br>{}<br>[]';
+var textStr3 = 'the meaning of a fluctuating field of suffering<br>()<br>（）<br>【】<br>「」<br>{}<br>[]';
 var textEl4 = document.getElementById('baishe');
 var textStr4 = 'Pay attention to the white snake. Many people have dreamed of a white snake. It is obviously the owner of the spring.';
 var textEl5 = document.getElementById('beiteng');
