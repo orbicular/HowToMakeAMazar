@@ -71,7 +71,7 @@ function move(evt){
   uniforms.u_mouse.value.y = (evt.touches) ? evt.touches[0].clientY : evt.clientY;
 }
 
-document.getElementById("msg").addEventListener("click", animate);
+document.getElementById("second").addEventListener("click", animate);
 
 function onWindowResize( event ) {
   const aspectRatio = window.innerWidth/window.innerHeight;
