@@ -31,8 +31,18 @@ img, video,audio {
 
 #word {
     height: 100vh;
-    right: 0;
+    right: 1%;
     z-index: 0;
+}
+
+#zuokuohao{
+top: 84%;
+right: 52%;
+}
+
+#youkuohao{
+right: 0%;
+top: 17.5%;
 }
 
 #tuopian {
