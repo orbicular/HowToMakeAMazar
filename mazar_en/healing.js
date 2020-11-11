@@ -73,6 +73,8 @@ function main() {
 
 var textEl = document.getElementById('leixing');
 var textStr = 'and there are 7 types of mazars:<br> 1. Water mazars: spring, lake, river<br> 2. Nature mazars: tree, mountain<br>3. Man made mazars: cemetery, headstone, fortress, mill<br>4. State mazars: national properties guarded by state<br>5. Animal mazars (spiritual supporters of those mazars are sacred animals) <br> 6. Mazars of people who just disappeared but not died<br>7. Stone Mazars';
+var textZuo= document.getElementById('zuokuohao');
+var textYou = document.getElementById('youkuohao');
 
 const tl1 = gsap.timeline({
     scrollTrigger: {
@@ -114,6 +116,26 @@ tl1.to('#word', {
         autoAlpha: 0,
         duration: 2
     })
+
+const tlbu = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#sectionStart',
+        }
+    })
+    tlbu.to(textZuo, 0.5, {
+            text: {
+                value: " "
+            },
+            ease: Linear.noease,
+            repeat: -1,
+        }, 'tag')
+        .to(textYou, 0.5, {
+            text: {
+                value: " "
+            },
+            ease: Linear.noease,
+            repeat: -1,
+        }, 'tag')
 
 
 var textEl2 = document.getElementById('xisheng');

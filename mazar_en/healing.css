@@ -5,7 +5,7 @@ html, body {
     background-color: black;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.03em;
-    line-height: 1.6em;
+    line-height: 1.5em;
 }
 
 section {
@@ -37,11 +37,11 @@ img, video,audio {
 
 #zuokuohao{
 top: 84%;
-right: 52%;
+right: 53%;
 }
 
 #youkuohao{
-right: 0%;
+right: 0.1%;
 top: 17.5%;
 }
 
