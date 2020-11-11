@@ -96,7 +96,7 @@ function onWindowResize( event ) {
 
 
 
-var audio = new Audio('radionoise2.mp3');
+var audio = new Audio('radionoise.mp3');
 
 function animate() {
   requestAnimationFrame( animate );
@@ -104,7 +104,10 @@ function animate() {
   renderer.render( scene, camera ); 
   document.getElementById('second').innerHTML = clock.getElapsedTime ();
   audio.play();
+  audio.volume= (1-(Math.ceil(uniforms.u_mouse.value.x *10 /uniforms.u_resolution.value.x)/10))*(Math.floor(uniforms.u_mouse.value.y *10 /uniforms.u_resolution.value.y)/10);
   document.getElementById('second').style.textDecoration = 'none';
+
+  console.log((1-(Math.ceil(uniforms.u_mouse.value.x *10 /uniforms.u_resolution.value.x)/10))*(Math.floor(uniforms.u_mouse.value.y *10 /uniforms.u_resolution.value.y)/10));
 }
 
 
