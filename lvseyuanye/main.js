@@ -97,6 +97,7 @@ function onWindowResize( event ) {
 
 
 var audio = new Audio('radionoise.mp3');
+audio.loop=true;
 
 function animate() {
   requestAnimationFrame( animate );
