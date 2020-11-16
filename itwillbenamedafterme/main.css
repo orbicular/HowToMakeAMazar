@@ -1,0 +1,37 @@
+body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+#video {
+    width: 100vw;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+#audio {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 3;
+}
+
+#map {
+    width: 100px;
+    height: 50px;
+    left: 70%;
+    top: 45%;
+    position: absolute;
+    z-index: 1;
+}
+
+#street {
+    /* width: 25%;
+    height: 30%; */
+    left: 65%;
+    top: 35%;
+    position: absolute;
+    z-index: 2;
+}
