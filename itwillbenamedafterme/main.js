@@ -30,5 +30,5 @@ function play() {
     console.log(audio.currentTime);
     setTimeout(function () {
         audio.pause();
-    }, 10000);
+    }, 13000);
 }

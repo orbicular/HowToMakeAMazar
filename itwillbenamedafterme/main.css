@@ -16,6 +16,14 @@ html,body {
     height: 30px;
     position: absolute;
     z-index: 3;
+    left: 140px;
+    top:10px;
+}
+
+#rating {
+    height: 40px;
+    position: absolute;
+    z-index: 2;
 }
 
 #map {
@@ -31,7 +39,7 @@ html,body {
     /* width: 25%;
     height: 30%; */
     left: 65%;
-    top: 35%;
+    top: 40%;
     position: absolute;
     z-index: 2;
 }
