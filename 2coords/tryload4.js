@@ -1,0 +1,110 @@
+// 'use strict';
+
+import * as THREE from './threejsmaster/build/three.module.js';
+import { AsciiEffect } from './threejsmaster/examples/jsm/effects/AsciiEffect.js';
+import { OrbitControls } from './threejsmaster/examples/jsm/controls/OrbitControls.js';
+
+/* global THREE */
+
+function main() {
+    // const canvas = document.querySelector('#c');
+    // const renderer = new THREE.WebGLRenderer({
+    //     canvas
+    // });
+
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+
+
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color('#000000');
+
+    // Axes helper
+    const axes = new THREE.AxesHelper(30);
+    scene.add(axes);
+
+    // Ambient Lighting
+    // const light = new THREE.AmbientLight(0x500000, 3);
+    // light.castShadows = true
+    // scene.add(light);
+
+    // directional light
+    const green = "rgb(10,200,10)";
+    const blue = 0x0000ff;
+    const intensity = 2.5;
+    const light2 = new THREE.DirectionalLight(blue, intensity);
+    light2.position.set(5, 10, 2);
+    light2.target.position.set(-5, 0, 0);
+    scene.add(light2);
+    scene.add(light2.target);
+    //spotlight
+    const spotlight = new THREE.SpotLight(0xff0000, 2);
+    spotlight.position.set(-10, 10, 10);
+    scene.add(spotlight);
+
+    //video
+    const video = document.getElementById("video");
+    video.play();
+    const texture = new THREE.VideoTexture( video );
+
+    // plane
+    const geometry = new THREE.PlaneGeometry(3.52, 6.40);
+    const parameters = { color: 0xffffff, map: texture };
+    const material = new THREE.MeshBasicMaterial( parameters );
+    const plane = new THREE.Mesh(geometry, material);
+    scene.add(plane);
+
+
+    let renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor( 0x000000, 1);
+
+    let effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, color: false});
+    effect.setSize(window.innerWidth, window.innerHeight);
+    effect.domElement.style.color = 'white';
+    effect.domElement.style.backgroundColor = 'black';
+
+    document.body.appendChild(effect.domElement);
+    window.addEventListener('resize', onWindowResize, false);
+
+    const controls = new OrbitControls(camera, effect.domElement);
+
+
+
+
+    function onWindowResize() {
+        // const canvas = renderer.domElement;
+        // const width = canvas.clientWidth;
+        // const height = canvas.clientHeight;
+        // const needResize = canvas.width !== width || canvas.height !== height;
+        // if (needResize) {
+        //     renderer.setSize(width, height, false);
+        // }
+        // return needResize;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        effect.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function render() {
+        // if (resizeRendererToDisplaySize(renderer)) {
+        //     const canvas = renderer.domElement;
+        //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        //     camera.updateProjectionMatrix();
+        // }
+        controls.autoRotate = false;
+        controls.update();
+        // renderer.outputEncoding = THREE.sRGBEncoding;
+        effect.render(scene, camera);
+        requestAnimationFrame(render);
+    }
+
+
+    requestAnimationFrame(render);
+}
+
+main();
+
+

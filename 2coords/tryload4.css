@@ -1,0 +1,13 @@
+html { height: 100% }
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  min-height: 100%
+}
+
+
+#video{
+  position: absolute;
+  display: none;
+}
