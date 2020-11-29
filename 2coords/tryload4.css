@@ -24,3 +24,14 @@ body {
 #kuang span {
   margin: 0 50px;
 }
+
+#border{
+  height: 80%;
+  width: 35%;
+  top:10%;
+  left: 35%;
+  border-color: tomato;
+  border: tomato;
+  position: absolute;
+  background: none;
+}

@@ -45,13 +45,30 @@ function main() {
 
     //video
     const video = document.getElementById("video");
+    const texture = new THREE.VideoTexture(video);
     video.play();
-    const texture = new THREE.VideoTexture( video );
+    video.pause();
+
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    window.addEventListener('click', onDocumentMouseClick, false);
+    function onDocumentMouseClick(event) {
+        event.preventDefault();
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(scene.children);
+        if (intersects.length > 0 && intersects[0].object == plane) {
+            video.play();
+            render();
+        }
+    }
+
 
     // plane
     const geometry = new THREE.PlaneGeometry(3.52, 6.40);
     const parameters = { color: 0xffffff, map: texture };
-    const material = new THREE.MeshBasicMaterial( parameters );
+    const material = new THREE.MeshBasicMaterial(parameters);
     const plane = new THREE.Mesh(geometry, material);
     scene.add(plane);
 
@@ -65,15 +82,15 @@ function main() {
     plane2.position.y = -3;
     plane2.position.x = -7.7;
     plane2.position.z = -5;
-    camera.add( plane2 );
-    scene.add(camera );
+    camera.add(plane2);
+    scene.add(camera);
 
 
     let renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor( 0x000000, 1);
+    renderer.setClearColor(0x000000, 1);
 
-    let effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, color: false});
+    let effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, color: false });
     effect.setSize(window.innerWidth, window.innerHeight);
     effect.domElement.style.color = 'white';
     effect.domElement.style.backgroundColor = 'black';
@@ -82,9 +99,8 @@ function main() {
     window.addEventListener('resize', onWindowResize, false);
 
     const controls = new OrbitControls(camera, effect.domElement);
-
-
-
+    controls.maxDistance = 100;
+    controls.minDistance = 1;
 
     function onWindowResize() {
         // const canvas = renderer.domElement;
@@ -119,5 +135,3 @@ function main() {
 }
 
 main();
-
-
