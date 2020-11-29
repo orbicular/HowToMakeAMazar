@@ -11,3 +11,16 @@ body {
   position: absolute;
   display: none;
 }
+
+
+#kuang{
+  position: absolute;
+  background: none;
+  color: white;
+  font-size: 0.6em;
+  top:79.4%;
+}
+
+#kuang span {
+  margin: 0 50px;
+}
