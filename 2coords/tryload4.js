@@ -21,8 +21,8 @@ function main() {
     scene.background = new THREE.Color('#000000');
 
     // Axes helper
-    const axes = new THREE.AxesHelper(30);
-    scene.add(axes);
+    // const axes = new THREE.AxesHelper(30);
+    // scene.add(axes);
 
     // Ambient Lighting
     // const light = new THREE.AmbientLight(0x500000, 3);
@@ -54,6 +54,19 @@ function main() {
     const material = new THREE.MeshBasicMaterial( parameters );
     const plane = new THREE.Mesh(geometry, material);
     scene.add(plane);
+
+    //plane2
+    const geometry2 = new THREE.PlaneGeometry(1.1, 0.35);
+    const material2 = new THREE.MeshPhongMaterial({ color: 0xffffff });
+    const plane2 = new THREE.Mesh(geometry2, material2);
+    // plane2.position.y = -3.4;
+    // plane2.position.x = -7.2;
+    // plane2.position.z = 0;
+    plane2.position.y = -3;
+    plane2.position.x = -7.7;
+    plane2.position.z = -5;
+    camera.add( plane2 );
+    scene.add(camera );
 
 
     let renderer = new THREE.WebGLRenderer();
