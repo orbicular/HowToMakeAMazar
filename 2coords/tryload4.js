@@ -90,7 +90,8 @@ function main() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000, 1);
 
-    let effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, color: false });
+    let effect = new AsciiEffect(renderer, ' duality', { invert: true, color: false });
+    //let effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, color: false });
     effect.setSize(window.innerWidth, window.innerHeight);
     effect.domElement.style.color = 'white';
     effect.domElement.style.backgroundColor = 'black';

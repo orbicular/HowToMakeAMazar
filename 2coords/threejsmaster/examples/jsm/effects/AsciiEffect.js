@@ -10,8 +10,8 @@ var AsciiEffect = function ( renderer, charSet, options ) {
 
 	// its fun to create one your own!
 
-	charSet = ( charSet === undefined ) ? ' .:-=+*#%@' : charSet;
-
+	charSet = ( charSet === undefined ) ? ' duality' : charSet;
+    //charSet = ( charSet === undefined ) ? ' #.:-=+*%@' : charSet; 
 	// ' .,:;=|iI+hHOE#`$';
 	// darker bolder character set from https://github.com/saw/Canvas-ASCII-Art/
 	// ' .\'`^",:;Il!i~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'.split('');
