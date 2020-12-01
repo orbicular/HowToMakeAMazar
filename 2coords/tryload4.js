@@ -40,7 +40,7 @@ function main() {
     scene.add(light2.target);
     //spotlight
     const spotlight = new THREE.SpotLight(0xff0000, 2);
-    spotlight.position.set(-10, 10, 10);
+    spotlight.position.set(10, 10, 10);
     scene.add(spotlight);
 
     //video
@@ -73,14 +73,14 @@ function main() {
     scene.add(plane);
 
     //plane2
-    const geometry2 = new THREE.PlaneGeometry(1.1, 0.35);
+    const geometry2 = new THREE.PlaneGeometry(0.5, 0.2);
     const material2 = new THREE.MeshPhongMaterial({ color: 0xffffff });
     const plane2 = new THREE.Mesh(geometry2, material2);
     // plane2.position.y = -3.4;
     // plane2.position.x = -7.2;
     // plane2.position.z = 0;
     plane2.position.y = -3;
-    plane2.position.x = -7.7;
+    plane2.position.x = -8;
     plane2.position.z = -5;
     camera.add(plane2);
     scene.add(camera);
