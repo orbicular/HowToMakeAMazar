@@ -7,15 +7,9 @@ import { OrbitControls } from './threejsmaster/examples/jsm/controls/OrbitContro
 /* global THREE */
 
 function main() {
-    // const canvas = document.querySelector('#c');
-    // const renderer = new THREE.WebGLRenderer({
-    //     canvas
-    // });
 
     const camera = new THREE.PerspectiveCamera(75, 1280 / 586, 0.1, 1000);
     camera.position.z = 5;
-
-
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color('#000000');
@@ -46,23 +40,9 @@ function main() {
     //video
     const video = document.getElementById("video");
     const texture = new THREE.VideoTexture(video);
-    video.play();
-    video.pause();
+    // video.play();
+    // video.pause();
 
-    const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2();
-    window.addEventListener('click', onDocumentMouseClick, false);
-    function onDocumentMouseClick(event) {
-        event.preventDefault();
-        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
-        raycaster.setFromCamera(mouse, camera);
-        const intersects = raycaster.intersectObjects(scene.children);
-        if (intersects.length > 0 && intersects[0].object == plane) {
-            video.play();
-            render();
-        }
-    }
 
 
     // plane
@@ -76,48 +56,60 @@ function main() {
     const geometry2 = new THREE.PlaneGeometry(0.5, 0.2);
     const material2 = new THREE.MeshPhongMaterial({ color: 0xffffff });
     const plane2 = new THREE.Mesh(geometry2, material2);
-    // plane2.position.y = -3.4;
-    // plane2.position.x = -7.2;
-    // plane2.position.z = 0;
     plane2.position.y = -3;
     plane2.position.x = -8;
     plane2.position.z = -5;
     camera.add(plane2);
     scene.add(camera);
 
-    const canvas=document.getElementById("c");
-    let renderer = new THREE.WebGLRenderer(canvas);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    let renderer = new THREE.WebGLRenderer();
+    // renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(1280,586);
     //renderer.setPixelRatio(1280/586);
-    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000, 1);
 
     let effect = new AsciiEffect(renderer, ' duality', { invert: true, color: false });
     //let effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true, color: false });
-    effect.setSize(window.innerWidth, window.innerHeight);
+    effect.setSize(1280,586);
     effect.domElement.style.color = 'white';
     effect.domElement.style.backgroundColor = 'black';
 
     document.body.appendChild(effect.domElement);
-    window.addEventListener('resize', onWindowResize, false);
+    // window.addEventListener('resize', onWindowResize, false);
 
     const controls = new OrbitControls(camera, effect.domElement);
     controls.maxDistance = 100;
     controls.minDistance = 1;
 
-    function onWindowResize() {
-        // const canvas = renderer.domElement;
-        // const width = canvas.clientWidth;
-        // const height = canvas.clientHeight;
-        // const needResize = canvas.width !== width || canvas.height !== height;
-        // if (needResize) {
-        //     renderer.setSize(width, height, false);
+    // function onWindowResize() {
+    //     // const canvas = renderer.domElement;
+    //     // const width = canvas.clientWidth;
+    //     // const height = canvas.clientHeight;
+    //     // const needResize = canvas.width !== width || canvas.height !== height;
+    //     // if (needResize) {
+    //     //     renderer.setSize(width, height, false);
+    //     // }
+    //     // return needResize;
+    //     // camera.aspect = window.innerWidth / window.innerHeight;
+    //     // camera.updateProjectionMatrix();
+    //     renderer.setSize(window.innerWidth, window.innerHeight);
+    //     effect.setSize(window.innerWidth, window.innerHeight);
+    // }
+
+    // const raycaster = new THREE.Raycaster();
+    // const mouse = new THREE.Vector2();
+    document.body.addEventListener('click', onDocumentMouseClick, false);
+    function onDocumentMouseClick(event) {
+        //event.preventDefault();
+        // mouse.x = (event.clientX / 1280) * 2 - 1;
+        // mouse.y = - (event.clientY / 586) * 2 + 1;
+        // raycaster.setFromCamera(mouse, camera);
+        // const intersects = raycaster.intersectObjects(scene.children);
+        // if (intersects.length > 0 && intersects[0].object == plane) {
+             video.play();
+        //     render();
         // }
-        // return needResize;
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        effect.setSize(window.innerWidth, window.innerHeight);
     }
 
     function render() {
