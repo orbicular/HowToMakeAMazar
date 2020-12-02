@@ -18,20 +18,16 @@ body {
   background: none;
   color: white;
   font-size: 0.6em;
-  top:79.4%;
+  top:503px;
 }
 
 #kuang span {
-  margin: 0 50px;
+  margin: 0 21px;
 }
 
-#border{
-  height: 80%;
-  width: 35%;
-  top:10%;
-  left: 35%;
-  border-color: tomato;
-  border: tomato;
+canvas{
+  width: 1280px;
+  height: 586px;
   position: absolute;
-  background: none;
+  overflow: hidden;
 }

@@ -12,7 +12,7 @@ function main() {
     //     canvas
     // });
 
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, 1280 / 586, 0.1, 1000);
     camera.position.z = 5;
 
 
@@ -85,8 +85,10 @@ function main() {
     camera.add(plane2);
     scene.add(camera);
 
-
-    let renderer = new THREE.WebGLRenderer();
+    const canvas=document.getElementById("c");
+    let renderer = new THREE.WebGLRenderer(canvas);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    //renderer.setPixelRatio(1280/586);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000, 1);
 
