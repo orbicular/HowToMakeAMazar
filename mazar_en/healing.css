@@ -20,6 +20,10 @@ div,button {
     margin: 0;
 }
 
+a{
+    color: #a4ecbc;
+}
+
 img, video,audio {
     position: absolute;
     opacity: 0;
