@@ -473,7 +473,11 @@ tl8.to('#disco', {
     .to('#video2', {
         opacity: 1,
         duration: 4
-    })
+    }, 'linkchuxian')
+    .to('#link', {
+        opacity: 1,
+        duration: 4
+    }, 'linkchuxian')
     .to('#chair', {
         opacity: 0,
         duration: 4
