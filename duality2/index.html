@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,user-scalable=yes">
 	<title>duality2</title>
 	<link type="text/css" href="./css/glsl-canvas.css" rel="stylesheet" />
-	<script type="text/javascript" src="./js/stats.min.js"></script>
+	<!-- <script type="text/javascript" src="./js/stats.min.js"></script> -->
 	<script type="text/javascript" src="./js/glsl-canvas.min.js"></script>
 </head>
 
@@ -17,9 +17,9 @@
 	/*
 	stats.js
 	*/
-	var stats = new Stats();
-	stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
-	document.body.appendChild(stats.dom);
+	// var stats = new Stats();
+	// stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+	// document.body.appendChild(stats.dom);
 
 	/*
 	glsl-canvas.js
@@ -27,17 +27,17 @@
 	Events: load, error, textureError, render, over, out, move, click
 	Methods: load, on, pause, play, toggle, setTexture, setUniform, setUniforms, destroy
 	*/
-	var options = {
-		extensions: [],
-	};
-	var canvas = document.querySelector('.glsl-canvas');
-	var glsl = new glsl.Canvas(canvas, options);
-	glsl.setUniforms({});
-	glsl.on('render', function () {
-		stats.end();
-		// execute here custom code on every raf tick
-		stats.begin();
-	});
+	// var options = {
+	// 	extensions: [],
+	// };
+	// var canvas = document.querySelector('.glsl-canvas');
+	// var glsl = new glsl.Canvas(canvas, options);
+	// glsl.setUniforms({});
+	// glsl.on('render', function () {
+	// 	stats.end();
+	// 	// execute here custom code on every raf tick
+	// 	stats.begin();
+	// });
 </script>
 
 </html>
