@@ -11,7 +11,7 @@ mat2 rotate(float angle){
 }
 
 float random(vec2 st){
-    return fract(sin(dot(st,vec2(12.9898,78.233))+u_time/100000.)*43758.5453123);
+    return fract(sin(dot(st,vec2(12.9898,78.233))+u_time/100000.+u_mouse.y/1000000.)*43758.5453123);
 }
 
 float noise(vec2 st){
