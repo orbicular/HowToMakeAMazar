@@ -437,7 +437,7 @@ tl8.to('#disco', {
         y: '85%',
         duration: 6
     }, 'yi')
-    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。<br>留意你的乳头。<br>如果将人约束在某个限制性环境，再浸泡在温水里，那么ta会很快开始听见、看见……' }, '-=4')
+    .to("#jixia", { duration: 4, text: '记下这里的夜晚和一切规则。<br>留意你的乳头。<br>如果将人约束在某个完全黑暗的限制性环境，再浸泡在温水里，那么ta会很快开始听见、看见……' }, '-=4')
     .to('#mapFlat', {
         opacity: 0,
         duration: 0.5,
@@ -451,7 +451,11 @@ tl8.to('#disco', {
     .to('#video2', {
         opacity: 1,
         duration: 4
-    })
+    }, 'linkchuxian')
+    .to('#link', {
+        opacity: 1,
+        duration: 4
+    }, 'linkchuxian')
     .to('#chair', {
         opacity: 0,
         duration: 4

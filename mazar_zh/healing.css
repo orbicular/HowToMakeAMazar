@@ -14,7 +14,7 @@ section {
     overflow: hidden;
 }
 
-div,button {
+div,button,a {
     color: #a4ecbc;
     position: absolute;
     margin: 0;
@@ -23,6 +23,10 @@ div,button {
 img, video,audio {
     position: absolute;
     opacity: 0;
+}
+
+#rm{
+    color: #c4c4c4;
 }
 
 #word {
@@ -265,4 +269,12 @@ img, video,audio {
     object-fit: cover;
     opacity: 1;
     z-index: 1;
+}
+
+#link{
+    z-index: 3;
+    opacity: 0;
+    color: #a4ecbc;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.03em;
 }
