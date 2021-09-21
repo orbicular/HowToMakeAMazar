@@ -94,7 +94,7 @@ tl1.to('#word', {
     }, 'tag')
     .to('#tuopian', {
         text: {
-            value: '制作麻扎铭文，使点和划介于阿拉伯语字母和自然痕迹之间。'
+            value: '用3D软件制作麻扎铭文，使点和划介于阿拉伯语字母和自然痕迹之间。'
         },
         duration: 2
     }, 'tag2')
@@ -277,7 +277,7 @@ tl.to('canvas', {
 }, 'yiqi')
     .to('#wuming', {
         duration: 4,
-        text: '制作黄昏中位于费尔干纳盆地的无名麻扎。',
+        text: '制作黄昏中位于费尔干纳盆地的无名麻扎副本。',
         delay: 8
     }, 'yiqi')
     .to('#i1', {
@@ -381,7 +381,7 @@ sound.onplay = function () {
 
 
 var textEl8 = document.getElementById('heshui');
-var textStr8 = '记下化学成分。';
+var textStr8 = '记下水疗的化学成分。';
 const tl7 = gsap.timeline({
     scrollTrigger: {
         trigger: '#sectionChemical',
